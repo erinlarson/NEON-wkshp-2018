@@ -1,7 +1,11 @@
-## NEON workshop ##
-###################
+## NEON workshop DAY 1 ##
+#########################
 ## Nov 8, 2018
 # Accessing NEON data and Using neonUtilities
+# this routine is also available as a tutorial on NEON science 
+# (neonscience.org/download-explore-neon-data)
+
+
 ## Downloading and attaching packages needed for NEON workshop
 # uncomment to install
 #install.packages("raster")
@@ -24,7 +28,6 @@ options(stringsAsFactors=F)
 
 # stack data from portal - helps merge month files
 # here we're using PAR data we downloaded manually from the Data Portal from two sites and two months
-# this routine is also available as a tutorial on NEON science (neonscience.org/download-explore-neon-data)
 stackByTable("NEON_par.zip") # replace with your own filepath as needed
 
 # download data with zipsByProduct()
