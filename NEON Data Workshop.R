@@ -1,7 +1,7 @@
 ## NEON workshop ##
 ###################
-## Nov 8-9, 2018
-
+## Nov 8, 2018
+# Accessing NEON data and Using neonUtilities
 ## Downloading and attaching packages needed for NEON workshop
 # uncomment to install
 #install.packages("raster")
