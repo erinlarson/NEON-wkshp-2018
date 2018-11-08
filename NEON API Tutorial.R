@@ -32,8 +32,24 @@ bird.urls <- unlist(available$data$siteCodes$availableDataUrls)
 bird.urls
 
 # get data availability for WOOD July 2015
-brd <- httr::GET(bird.urls[grep("WOOD/2015-07", bird.urls)])
-brd.files <- fromJSON(content(brd, as="text"))
+bird <- httr::GET(bird.urls[grep("WOOD/2015-07", bird.urls)])
+bird.files <- fromJSON(content(brd, as="text"))
 
 # view just the available data files
-brd.files$data$files
+bird.files$data$files
+
+## you can read in files directly from API urls
+bird.count <- read.delim(bird.files$data$files$url[intersect(grep("countdata", bird.files$data$files$name), 
+                                                   grep("basic", bird.files$data$files$name))], sep=",")
+View(bird.count)
+
+# Looking at taxonomy of the loon family!
+loon.req <- GET("http://data.neonscience.org/api/v0/taxonomy/?family=Gaviidae")
+loon.list <- fromJSON(content(loon.req, as="text"))
+loon.list
+
+# Combining query parameters in a call
+chattyloon.req <- GET("http://data.neonscience.org/api/v0/taxonomy/?family=Gaviidae&verbose=TRUE")
+chattyloon.list <- fromJSON(content(chattyloon.req, as="text"))
+chattyloon.list
+
