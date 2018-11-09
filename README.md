@@ -1,5 +1,5 @@
 # NEON-wkshp-2018
-Code from NEON Graduate Workshop November 8-9 2018
+My personal code from NEON Graduate Workshop November 8-9 2018
 
 This is code I wrote during the NEON graduate explore workshop (https://www.neonscience.org/explore-neon-grads-2018)  
   
