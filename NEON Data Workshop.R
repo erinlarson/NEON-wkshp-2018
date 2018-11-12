@@ -28,6 +28,7 @@ options(stringsAsFactors=F)
 
 # stack data from portal - helps merge month files
 # here we're using PAR data we downloaded manually from the Data Portal from two sites and two months
+# You can download data from the Data Portal here: http://data.neonscience.org/static/browse.html
 stackByTable("NEON_par.zip") # replace with your own filepath as needed
 
 # download data with zipsByProduct()
